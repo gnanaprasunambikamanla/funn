@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet" />
+  <title>Do You Love Me?</title>
+  <link rel="stylesheet" href="do_you_love_me.css" />
+</head>
+<body>
+
+  <div class="question-container container">
+    <!-- Starting GIF embed from Tenor -->
+    <div
+      class="tenor-gif-embed"
+      data-postid="10155227626891835191"
+      data-share-method="host"
+      data-aspect-ratio="0.566265"
+      data-width="100%">
+      <a href="https://tenor.com/view/cool-fun-white-cat-dance-cool-and-fun-times-gif-10155227626891835191">
+        Cool Fun GIF
+      </a>
+      from
+      <a href="https://tenor.com/search/cool-gifs">Cool GIFs</a>
+    </div>
+
+    <h2 class="question">Date tonight?</h2>
+    <div class="button-container">
+      <button class="yes-btn btn js-yes-btn">Yes</button>
+      <button class="no-btn btn js-no-btn">No</button>
+    </div>
+  </div>
+
+  <div class="result-container container" style="display:none;">
+    <!-- Result GIF will be dynamically injected here -->
+  </div>
+
+  <!-- Load Tenor embed script ONCE globally -->
+  <script src="https://tenor.com/embed.js" async></script>
+
+  <script src="do_you_love_me.js"></script>
+</body>
+</html>
