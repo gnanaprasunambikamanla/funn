@@ -3,13 +3,12 @@ const resultContainer = document.querySelector(".result-container");
 const yesBtn = document.querySelector(".js-yes-btn");
 const noBtn = document.querySelector(".js-no-btn");
 
-// Moves the "No" button randomly in the question container on hover
 function moveNoButtonRandomly() {
   const containerRect = questionContainer.getBoundingClientRect();
   const noBtnRect = noBtn.getBoundingClientRect();
 
   const maxX = containerRect.width - noBtnRect.width;
-  const maxY = containerRect.height - noBtnRect.height - 35; // approximate for text height
+  const maxY = containerRect.height - noBtnRect.height - 35;
 
   const newX = Math.random() * maxX;
   const newY = Math.random() * maxY;
@@ -20,7 +19,6 @@ function moveNoButtonRandomly() {
 
 noBtn.addEventListener("mouseover", moveNoButtonRandomly);
 
-// On click "Yes", hide question and inject the success GIF from Tenor dynamically
 yesBtn.addEventListener("click", () => {
   yesBtn.disabled = true;
   noBtn.disabled = true;
@@ -42,7 +40,6 @@ yesBtn.addEventListener("click", () => {
 
   resultContainer.style.display = "block";
 
-  // Tell Tenor to parse new embed elements dynamically added to the DOM
   if (window.TenorEmbed && typeof window.TenorEmbed.createElements === "function") {
     window.TenorEmbed.createElements();
   }
